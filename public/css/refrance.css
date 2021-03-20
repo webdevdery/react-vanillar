@@ -1,0 +1,401 @@
+#heading {
+    text-transform: uppercase;
+    color: #673AB7;
+    font-weight: normal
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+}
+
+#msform form {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 170px;
+    height: calc(100vh - 235px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.form-card {
+    text-align: left
+}
+
+#msform form:not(:first-of-type), .first, .progressbar li:not(:first-of-type) {
+    display: none
+}
+#msform .first:first-child {
+    display: block;
+}
+
+#msform .action-button {
+    background: #606060;
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 45px;
+    line-height: 21px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    background-color: #e6252c;
+}
+
+#msform .action-button-previous {
+    font-weight: 600;
+    color: #929394;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #fff;
+    line-height: 21px;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    background-color: #fff;
+    outline: none;
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.progressbar {
+    margin-bottom: 0px;
+    overflow: hidden;
+    border-bottom: 1px solid #d0d1d1;
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+.progressbar li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.progressbar .active {
+    color: #673AB7
+}
+.progressbar li {
+    list-style-type: none;
+}
+.progressbar li span {
+    font-size: 15px;
+    position: relative;
+    font-weight: 400;
+    padding: 10px 15px;
+}
+.progressbar li span:after {
+    position: absolute;
+    content: '';
+    border-right: 1px solid #e0e0e0;
+    height: 40px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.progressbar li span:last-child:after {
+    content: none;
+}
+
+/*.progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}*/
+
+/*.progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}*/
+
+.progress {
+    height: 6px;
+    position: relative;
+    width: 100%;
+    top: -10px;
+}
+
+.progress-bar {
+    background-color: #2DC03C;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+
+
+
+
+
+.status {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.status input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.status .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #d0d1d1;
+    border-radius: 4px;
+    width: 186px;
+    height: 186px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #909090;
+}
+.status .checkmark small {
+    font-weight: 600;
+}
+.status .checkmark .col-6, .checkmark .col-12 {
+    height: 137px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.status .checkmark .col-6:first-child:after {
+    border-right: 1px solid rgba(208, 209, 209, 0.7);
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: 70%;
+    content: '';
+}
+.radioOption {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.radioOption > div {
+    display: block;
+    width: 186px;
+    height: 186px;
+}
+.radioOption div.position-relative:not(:first-of-type) {
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* On mouse-over, add a grey background color */
+/*.status:hover input ~ .checkmark {
+    background-color: #ccc;
+}*/
+
+/* When the radio button is checked, add a blue background */
+.status input:checked ~ .checkmark {
+    border: 1px solid #1e1e1e;
+    color: #000;
+    font-weight: 500;
+}
+.status input:checked ~ .checkmark svg {
+    fill: #1e1e1e;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.status .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+/*.status input:checked ~ .checkmark:after {
+    display: block;
+}*/
+
+/* Style the indicator (dot/circle) */
+/*.status .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}*/
+.kids .status .checkmark {
+    width: 134px;
+    height: 48px;
+    align-items: center;
+}
+.kids > div {
+    width: 134px;
+    height: 48px;
+}
+
+
+
+.ProgressBar1,
+.ProgressBar-contentCircle{
+    height: 200px;
+    position: relative;
+    width: 200px;
+    z-index: 1;
+}
+.ProgressBar-circle,
+.ProgressBar-background{
+    /*animation: progress 1s;*/
+    fill: #fff;
+    stroke: #ff7791;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    position: relative;
+    z-index: 10;
+}
+.ProgressBar-background{
+    stroke: white;
+    stroke-width: 0;
+    z-index: 0;
+}
+.ProgressBar-percentage{
+    color: #1e1e1e;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.ProgressBar2,
+.ProgressBar2 .ProgressBar-contentCircle{
+    height: 80px;
+    position: relative;
+    width: 80px;
+    z-index: 1;
+}
+
+.ProgressBar2 .ProgressBar-circle,
+.ProgressBar2 .ProgressBar-background{
+    /*animation: progress 1s;*/
+    fill: #fff;
+    stroke: #ff7791;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    position: relative;
+    z-index: 10;
+}
+.ProgressBar2 .ProgressBar-background{
+    stroke: white;
+    stroke-width: 0;
+    z-index: 0;
+}
+.ProgressBar2 .ProgressBar-percentage{
+    color: #787373;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.ProgressBar--animateAll_1 .ProgressBar-circle,
+.ProgressBar--animateAll_1 .ProgressBar-background{
+    stroke: #3e3772;
+}
+.ProgressBar--animateAll_2 .ProgressBar-circle,
+.ProgressBar--animateAll_2 .ProgressBar-background{
+    stroke: #fe708a;
+}
+.ProgressBar--animateAll_3 .ProgressBar-circle,
+.ProgressBar--animateAll_3 .ProgressBar-background{
+    stroke: #4da2ff;
+}
+.ProgressBar--animateAll_4 .ProgressBar-circle,
+.ProgressBar--animateAll_4 .ProgressBar-background{
+    stroke: #ffda51;
+}
+.ProgressBar--animateAll_5 .ProgressBar-circle,
+.ProgressBar--animateAll_5 .ProgressBar-background{
+    stroke: #04c751;
+}
+.ProgressBar--animateAll_6 .ProgressBar-circle,
+.ProgressBar--animateAll_6 .ProgressBar-background{
+    stroke: #cc21fd;
+}
+.ProgressBar--animateAll_7 .ProgressBar-circle,
+.ProgressBar--animateAll_7 .ProgressBar-background{
+    stroke: #504df7;
+}
+.ProgressBar--animateAll_8 .ProgressBar-circle,
+.ProgressBar--animateAll_8 .ProgressBar-background{
+    stroke: #feb470;
+}
+.ProgressBar--animateAll_9 .ProgressBar-circle,
+.ProgressBar--animateAll_9 .ProgressBar-background{
+    stroke: #5bd1d1;
+}
